@@ -471,6 +471,70 @@
        /* Scale effect on hover */
    }
 
+   /* Navigation Bar Styles */
+   .custom-navbar {
+       top: 0;
+       z-index: 1030;
+   }
+
+   .desktop-logo, .mobile-logo {
+       max-height: 40px;
+   }
+
+   @media (max-width: 991px) {
+       .desktop-logo {
+           display: none;
+       }
+   }
+
+   @media (min-width: 992px) {
+       .mobile-logo {
+           display: none;
+       }
+   }
+
+   .offcanvas {
+       background-color: #343a40;
+       /* Dark background for off-canvas menu */
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .offcanvas-header {
+       border-bottom: 1px solid #495057;
+       /* Optional: a separator line */
+   }
+
+   .custom-dropdown .dropdown-menu {
+       background-color: #343a40;
+       /* Dark background for dropdown */
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .custom-dropdown .dropdown-item {
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .custom-dropdown .dropdown-item:hover {
+       background-color: #495057;
+       /* Highlight color on hover */
+   }
+
+   .search-bar {
+       margin-top: 0.5rem;
+       /* Space between search bar and other elements */
+   }
+
+   @media (min-width: 992px) {
+       .search-bar {
+           display: flex;
+           margin-left: auto;
+           /* Align search bar to the right */
+       }
+   }
+
    .blog-feature-section {
        background-color: #1C1C1C;
        /* Dark background */
