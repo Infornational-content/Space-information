@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Solar System</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="solarSystemCanvas"></canvas>
+    <script>
+      const canvas = document.getElementById('solarSystemCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const sun = {
+    x: canvas.width / 2,
+    y: canvas.height / 2,
+    radius: 30,
+    gradientRadius: 100,
+    color: 'yellow'
+};
+
+const planets = [
+    { 
+        radius: 5, 
+        distance: 50, 
+        color: 'gray', 
+        speed: 0.04, 
+        angle: 0,
+        axisTilt: 0.1,
+        ring: {
+            radius: 8,
+            lineWidth: 2,
+            color: 'rgba(255, 255, 255, 0.3)'
+        }
+    },
+    { 
+        radius: 10, 
+        distance: 80, 
+        color: 'orange', 
+        speed: 0.02, 
+        angle: 0,
+        axisTilt: 0.15,
+        shadowBlur: 10,
+        shadowColor: 'rgba(255, 165, 0, 0.8)',
+        atmosphereColor: 'rgba(255, 165, 0, 0.2)',
+        atmosphereRadius: 15
+    },
+    { 
+        radius: 12, 
+        distance: 120, 
+        color: 'blue', 
+        speed: 0.01, 
+        angle: 0,
+        axisTilt: 0.2,
+        orbitColor: 'rgba(0, 0, 255, 0.2)',
+        atmosphereColor: 'rgba(0, 0, 255, 0.1)',
+        atmosphereRadius: 18
+    },
+    { 
+        radius: 7, 
+        distance: 160, 
+        color: 'red', 
+        speed: 0.008, 
+        angle: 0,
+        axisTilt: 0.18,
+        shadowBlur: 8,
+        shadowColor: 'rgba(255, 0, 0, 0.5)',
+        atmosphereColor: 'rgba(255, 0, 0, 0.3)',
+        atmosphereRadius: 12
+    },
+    { 
+        radius: 14, 
+        distance: 200, 
+        color: 'green', 
+        speed: 0.007, 
+        angle: 0,
+        axisTilt: 0.25,
+        shadowBlur: 5,
+        shadowColor: 'rgba(0, 128, 0, 0.6)',
+        atmosphereColor: 'rgba(0, 128, 0, 0.2)',
+        atmosphereRadius: 20
+    },
+    { 
+        radius: 16, 
+        distance: 250, 
+        color: 'purple', 
+        speed: 0.006, 
+        angle: 0,
+        axisTilt: 0.3,
+        shadowBlur: 6,
+        shadowColor: 'rgba(128, 0, 128, 0.6)',
+        atmosphereColor: 'rgba(128, 0, 128, 0.2)',
+        atmosphereRadius: 22
+    },
+    { 
+        radius: 18, 
+        distance: 300, 
+        color: 'cyan', 
+        speed: 0.005, 
+        angle: 0,
+        axisTilt: 0.28,
+        shadowBlur: 7,
+        shadowColor: 'rgba(0, 128, 128, 0.6)',
+        atmosphereColor: 'rgba(0, 128, 128, 0.2)',
+        atmosphereRadius: 24
+    },
+    { 
+        radius: 20, 
+        distance: 350, 
+        color: 'magenta', 
+        speed: 0.004, 
+        angle: 0,
+        axisTilt: 0.22,
+        shadowBlur: 8,
+        shadowColor: 'rgba(255, 0, 255, 0.6)',
+        atmosphereColor: 'rgba(255, 0, 255, 0.2)',
+        atmosphereRadius: 26
+    }
+];
+
+const stars = Array.from({ length: 200 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2
+}));
+
+// Define habitable zone radii
+const habitableZone = {
+    innerRadius: 100,
+    outerRadius: 150
+};
+
+function drawSun() {
+    // Create a radial gradient for the sun's glow
+    const gradient = ctx.createRadialGradient(sun.x, sun.y, sun.radius, sun.x, sun.y, sun.gradientRadius);
+    gradient.addColorStop(0, 'rgba(255, 255, 0, 0.6)');
+    gradient.addColorStop(0.5, 'rgba(255, 255, 0, 0.3)');
+    gradient.addColorStop(1, 'rgba(255, 255, 0, 0)');
+
+    // Draw the gradient glow
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, sun.gradientRadius, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    ctx.closePath();
+
+    // Draw the sun with a glow effect
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, sun.radius, 0, Math.PI * 2);
+    ctx.fillStyle = sun.color;
+    ctx.shadowBlur = 100; // Increase shadow blur for a more pronounced glow
+    ctx.shadowColor = 'rgba(255, 255, 0, 0.8)'; // Brighter and more visible glow
+    ctx.fill();
+    ctx.closePath();
+
+    // Reset shadow properties to avoid affecting other drawings
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'rgba(0, 0, 0, 0)';
+}
+
+function drawHabitableZone() {
+    // Draw the outer boundary (Too Warm Zone)
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, habitableZone.outerRadius, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(255, 0, 0, 0.3)'; // Red for too warm
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.closePath();
+    
+    // Draw the inner boundary (Too Cool Zone)
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, habitableZone.innerRadius, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(0, 0, 255, 0.3)'; // Blue for too cool
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.closePath();
+    
+    // Draw the filled habitable zone area (between inner and outer radius)
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, habitableZone.outerRadius, 0, Math.PI * 2);
+    ctx.arc(sun.x, sun.y, habitableZone.innerRadius, Math.PI * 2, 0, true);
+    ctx.fillStyle = 'rgba(0, 255, 0, 0.2)'; // Green for habitable zone
+    ctx.fill();
+    ctx.closePath();
+    
+    // Draw the outer boundary of the habitable zone (green outline)
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, habitableZone.outerRadius, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(0, 255, 0, 0.5)'; // Green for habitable zone outline
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.closePath();
+    
+    // Draw the inner boundary of the habitable zone (green outline)
+    ctx.beginPath();
+    ctx.arc(sun.x, sun.y, habitableZone.innerRadius, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(0, 255, 0, 0.5)'; // Green for habitable zone outline
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+
+function drawOrbits() {
+    planets.forEach(planet => {
+        ctx.beginPath();
+        ctx.arc(sun.x, sun.y, planet.distance, 0, Math.PI * 2);
+        ctx.strokeStyle = planet.orbitColor || 'rgba(255, 255, 255, 0.1)';
+        ctx.stroke();
+        ctx.closePath();
+    });
+}
+
+function drawPlanets() {
+    planets.forEach(planet => {
+        const tilt = planet.axisTilt || 0;
+        const x = sun.x + planet.distance * Math.cos(planet.angle) * Math.cos(tilt) - planet.distance * Math.sin(planet.angle) * Math.sin(tilt);
+        const y = sun.y + planet.distance * Math.sin(planet.angle) * Math.cos(tilt) + planet.distance * Math.cos(planet.angle) * Math.sin(tilt);
+
+        // Calculate current orbital period based on current angle and speed in minutes
+        const orbitalPeriodMinutes = (2 * Math.PI * planet.distance) / (planet.speed * 60);
+
+        // Draw orbital period information in minutes
+        ctx.fillStyle = 'white';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(`Orbital Period: ${orbitalPeriodMinutes.toFixed(1)} minutes`, x, y + planet.radius + 20);
+
+        // Draw atmosphere (if defined)
+        if (planet.atmosphereColor && planet.atmosphereRadius) {
+            ctx.beginPath();
+            ctx.arc(x, y, planet.radius + planet.atmosphereRadius, 0, Math.PI * 2);
+            const atmosphereGradient = ctx.createRadialGradient(x, y, planet.radius, x, y, planet.radius + planet.atmosphereRadius);
+            atmosphereGradient.addColorStop(0, planet.color);
+            atmosphereGradient.addColorStop(1, planet.atmosphereColor);
+            ctx.fillStyle = atmosphereGradient;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Draw planet
+        ctx.beginPath();
+        ctx.arc(x, y, planet.radius, 0, Math.PI * 2);
+        const planetGradient = ctx.createRadialGradient(x, y, 0, x, y, planet.radius);
+        planetGradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)');
+        planetGradient.addColorStop(1, planet.color);
+        ctx.fillStyle = planetGradient;
+
+        // Adjust shadow blur and color based on distance
+        ctx.shadowBlur = planet.shadowBlur || 0;
+        ctx.shadowColor = planet.shadowColor || planet.color;
+
+        // Decrease shadow blur for distant planets
+        ctx.shadowBlur = Math.max(ctx.shadowBlur - (planet.distance / 100), 0);
+
+        ctx.fill();
+        ctx.closePath();
+    });
+}
+
+function drawStars() {
+    stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.closePath();
+    });
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    drawStars();
+    drawSun();
+    drawHabitableZone(); // Draw the habitable zone
+    drawOrbits();
+    drawPlanets();
+
+    planets.forEach(planet => {
+        planet.angle += planet.speed;
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+
+        let fpsCounter = {
+    startTime: 0,
+    frameCount: 0,
+    fps: 0,
+    update: function(timestamp) {
+        this.frameCount++;
+        if (this.startTime === 0) {
+            this.startTime = timestamp;
+        } else {
+            const elapsed = timestamp - this.startTime;
+            if (elapsed >= 1000) {
+                this.fps = Math.round((this.frameCount * 1000) / elapsed);
+                console.clear(); // Clear console
+                console.log(`FPS: ${this.fps}`); // Log new FPS value
+                this.startTime = timestamp;
+                this.frameCount = 0;
+            }
+        }
+        // Ensure requestAnimationFrame continues to update the FPS counter
+        requestAnimationFrame(this.update.bind(this));
+    }
+};
+
+// Start the FPS counter
+requestAnimationFrame(function(timestamp) {
+    fpsCounter.startTime = timestamp;
+    fpsCounter.update(timestamp);
+});
+
+
+
+    </script>
+</body>
+</html>

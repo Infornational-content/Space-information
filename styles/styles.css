@@ -1,0 +1,543 @@
+   /* Custom Hero Section Styles */
+   .custom-hero-section {
+       background-color: #1c1c1c;
+       color: #f8f9fa;
+       padding: 5rem 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   /* CSS */
+   /* CSS */
+   .about-us-logo {
+       max-width: 150px;
+       /* Adjust the size as needed */
+       height: 150px;
+       /* Ensure the height is the same as the width for a perfect circle */
+       border-radius: 50%;
+       /* Makes the image circular */
+       object-fit: cover;
+       /* Ensures the image covers the area properly */
+   }
+
+   .custom-hero-container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 2rem;
+   }
+
+   .custom-hero-image {
+       width: 100%;
+       height: auto;
+       /* Maintains aspect ratio */
+       height: auto;
+       margin-top: -7rem;
+       margin-bottom: -10rem;
+       border-radius: 10px;
+   }
+
+   .custom-hero-description {
+       font-size: 1.25rem;
+       color: #d3d3d3;
+       margin-bottom: 2rem;
+       max-width: 800px;
+   }
+
+   .about-us-section {
+       background-color: #1c1c1c;
+       /* Custom black background */
+       color: #f8f9fa;
+       /* Light text for contrast */
+       padding: 5rem 0;
+       /* Vertical spacing */
+   }
+
+   .about-us-title {
+       color: #ffffff;
+       /* Custom accent color (tomato) */
+       font-size: 2.5rem;
+       font-weight: 700;
+       margin-bottom: 2rem;
+   }
+
+   .about-us-text {
+       color: #d3d3d3;
+       /* Lighter grey text */
+       font-size: 1.2rem;
+       max-width: 800px;
+       margin: 0 auto;
+   }
+
+   .about-us-btn {
+       background: linear-gradient(45deg, #3c57b9, #5d7bd5);
+       border: none;
+       /* Remove border if not needed */
+       color: #fff;
+       /* Change text color to white for contrast */
+       padding: 0.75rem 2rem;
+       border-radius: 30px;
+       font-size: 1rem;
+       transition: all 0.3s ease;
+   }
+
+   .about-us-btn:hover {
+       background: linear-gradient(45deg, #5d7bd5, #3c57b9);
+       /* Reverse gradient on hover */
+       color: #fff;
+       /* Keep text color white on hover */
+   }
+
+
+   /* Custom Pagination Styles */
+   .custom-pagination .page-item .page-link {
+       color: #fff;
+       /* White text color for pagination links */
+       background-color: #007bff;
+       /* Primary blue background */
+       border: none;
+       /* Removes borders */
+   }
+
+   /* Active Pagination Link */
+   .custom-pagination .page-item.active .page-link {
+       background-color: #0056b3;
+       /* Darker blue for the active page link */
+   }
+
+   /* Go to Top Button */
+   #goTopBtn {
+       position: fixed;
+       /* Fixes button to the viewport */
+       bottom: 20px;
+       /* Positions 20px from the bottom */
+       right: 20px;
+       /* Positions 20px from the right */
+       display: none;
+       /* Initially hides the button */
+       background-color: #007bff;
+       /* Blue background */
+       color: white;
+       /* White text/icon */
+       border: none;
+       /* Removes borders */
+       border-radius: 50%;
+       /* Circular button */
+       width: 50px;
+       /* Button width */
+       height: 50px;
+       /* Button height */
+       font-size: 24px;
+       /* Larger font size for icon */
+       text-align: center;
+       /* Centers icon/text horizontally */
+       line-height: 50px;
+       /* Vertically centers icon/text */
+       cursor: pointer;
+       /* Pointer cursor on hover */
+   }
+
+   /* Go to Top Button Hover Effect */
+   #goTopBtn:hover {
+       background-color: #0056b3;
+       /* Darker blue background on hover */
+   }
+
+   /* Social Media Button Styles */
+   .social-btn {
+       background-color: #007bff;
+       /* Blue background */
+       color: white;
+       /* White icon color */
+       border: none;
+       /* No border */
+       border-radius: 50%;
+       /* Circular buttons */
+       width: 40px;
+       /* Button width */
+       height: 40px;
+       /* Button height */
+       font-size: 18px;
+       /* Font size for icons */
+       text-align: center;
+       /* Centers icon horizontally */
+       line-height: 40px;
+       /* Vertically centers the icon */
+       transition: background-color 0.3s ease;
+       /* Smooth hover transition */
+   }
+
+   /* Social Media Button Hover Effect */
+   .social-btn:hover {
+       background-color: #0056b3;
+       /* Darker blue background on hover */
+   }
+
+
+   /* Custom Background and Text Color for the Blog Section */
+   .custom-bg-dark {
+       background-color: #343a40;
+       /* Dark background color */
+   }
+
+   .custom-text-light {
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   /* Custom Display Heading */
+   .custom-display-4 {
+       font-size: 2.5rem;
+       /* Custom size for the display heading */
+       font-weight: 300;
+       /* Light font weight */
+   }
+
+   /* Custom Card Styling */
+   .custom-card {
+       background-color: #6c757d;
+       /* Secondary background color for cards */
+       border: none;
+       /* Remove border */
+       border-radius: 0.5rem;
+       /* Rounded corners */
+   }
+
+   .custom-card-img {
+       border-top-left-radius: 0.5rem;
+       /* Rounded corners on top-left */
+       border-top-right-radius: 0.5rem;
+       /* Rounded corners on top-right */
+       height: 200px;
+       /* Fixed height for images */
+       object-fit: cover;
+       /* Cover the card area */
+   }
+
+   .custom-card-title {
+       font-size: 1.25rem;
+       /* Custom size for card titles */
+       font-weight: 500;
+       /* Medium font weight */
+   }
+
+   .card-reading-time {
+       font-size: 0.875rem;
+       /* Slightly smaller font size */
+       color: #ffffff;
+       /* White text color for contrast */
+       background-color: #c834db;
+       /* Bright blue background color for highlighting */
+       margin-top: 0.5rem;
+       /* Space above the element */
+       margin-bottom: 0.5rem;
+       /* Space below the element */
+       font-weight: bold;
+       /* Bold text */
+       text-transform: uppercase;
+       /* Uppercase text */
+       border-radius: 5px;
+       /* Rounded corners for the background */
+       border: 2px solid #2980b9;
+       /* Darker blue border for definition */
+       padding: 0.5rem 1rem;
+       /* Padding around the text for better spacing */
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       /* Light shadow for a subtle 3D effect */
+       display: inline-block;
+       /* Fit the background to the text width */
+   }
+
+   .custom-card-text {
+       font-size: 1rem;
+       /* Standard font size for card text */
+       line-height: 1.5;
+       /* Line height for readability */
+   }
+
+   .custom-date-time {
+       font-size: 0.875rem;
+       /* Smaller font size for date and time */
+       color: #e9ecef;
+       /* Slightly lighter color for date and time */
+   }
+
+   .custom-badge-dark {
+       background-color: blueviolet;
+   }
+
+   .custom-btn {
+       background-color: #007bff;
+       /* Primary color for button */
+       border-color: #007bff;
+       /* Primary border color */
+       font-size: 1rem;
+       /* Standard button font size */
+   }
+
+   /* Badge Styles */
+   .custom-badge-info {
+       background-color: #17a2b8;
+       /* Info badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
+
+   .custom-badge-secondary {
+       background-color: #b92cff !important;
+       /* Replace with your desired background color */
+       color: #fff;
+       /* Optional: set text color for better contrast */
+   }
+
+   .custom-badge-warning {
+       background-color: #ffc107;
+       /* Warning badge color */
+       color: #212529;
+       /* Text color for badges */
+   }
+
+   .custom-badge-success {
+       background-color: #28a745;
+       /* Success badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
+
+   .custom-badge-danger {
+       background-color: #dc3545;
+       /* Danger badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
+
+   .custom-badge-primary {
+       background-color: #007bff;
+       /* Primary badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
+
+   .custom-badge-light {
+       background-color: #f8f9fa;
+       /* Light badge color */
+       color: #212529;
+       /* Text color for badges */
+   }
+
+   .custom-badge-secondary {
+       background-color: #6c757d;
+       /* Secondary badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
+
+   /* Responsive Styling for Blog Cards */
+   @media (max-width: 768px) {
+       .custom-card-img {
+           height: 150px;
+           /* Adjust image height for smaller screens */
+       }
+   }
+
+   /* Custom badge color for Dwarf Planets */
+
+
+   .custom-tag {
+       background-color: #6c757d;
+       /* Default tag color */
+       color: #fff;
+       margin: 0 5px 5px 0;
+       padding: 5px 10px;
+       border-radius: 20px;
+       font-size: 0.9rem;
+       display: inline-block;
+   }
+
+   .custom-tag.Inner-Planet {
+       background-color: #007bff;
+       /* Blue for inner planets */
+   }
+
+   .custom-tag.Outer-Planet {
+       background-color: #28a745;
+       /* Green for outer planets */
+   }
+
+   .custom-tag.Terrestrial {
+       background-color: #dc3545;
+       /* Red for terrestrial planets */
+   }
+
+   .custom-tag.Gas-Giant {
+       background-color: #17a2b8;
+       /* Teal for gas giants */
+   }
+
+   .custom-tag.Ice-Giant {
+       background-color: #6610f2;
+       /* Purple for ice giants */
+   }
+
+   .custom-tag.Habitable {
+       background-color: #fd7e14;
+       /* Orange for habitable */
+   }
+
+   .custom-badge-dwarf {
+       background-color: #f0ad4e;
+       /* Custom color for Dwarf Planet badge */
+       color: #fff;
+       /* Text color */
+   }
+
+   .custom-tag.Trans-Neptunian {
+       background-color: #fd7e14;
+       /* Orange for trans-Neptunian objects */
+   }
+
+   .custom-btn {
+       background-color: #007bff;
+       /* Bootstrap primary color */
+       color: #fff;
+       /* White text */
+       border: none;
+       border-radius: 5px;
+       padding: 10px 20px;
+       text-transform: uppercase;
+       font-weight: bold;
+       transition: background-color 0.3s, transform 0.3s;
+   }
+
+   .custom-btn:hover {
+       background-color: #0056b3;
+       /* Darker blue for hover effect */
+       transform: scale(1.05);
+       /* Slightly enlarge button on hover */
+   }
+
+   .custom-btn:focus,
+   .custom-btn:active {
+       outline: none;
+       box-shadow: none;
+   }
+
+   .custom-iframe-section {
+       padding: 3rem 0;
+       /* Adjust padding as needed */
+       text-align: center;
+   }
+
+   .custom-heading {
+       margin-bottom: 2rem;
+       /* Increased spacing */
+   }
+
+   .custom-ratio {
+       position: relative;
+       width: 100%;
+       padding-top: 56.25%;
+       /* 16:9 aspect ratio */
+   }
+
+   .custom-ratio iframe {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 50%;
+       height: 50%;
+   }
+
+   /* Custom dropdown styling */
+   .custom-dropdown {
+       background-color: black;
+       /* Dropdown background color */
+   }
+
+   .custom-dropdown .dropdown-item {
+       color: white;
+       /* Text color */
+       transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+       /* Smooth transition for background color, text color, and scale */
+   }
+
+   .custom-dropdown .dropdown-item:hover {
+       background-color: white;
+       /* Hover background color */
+       color: black;
+       /* Hover text color */
+       transform: scale(1.1);
+       /* Scale effect on hover */
+   }
+
+   .blog-feature-section {
+       background-color: #1C1C1C;
+       /* Dark background */
+       color: #fff;
+       /* White text */
+   }
+
+   .feature-card {
+       background-color: #212529;
+       /* Slightly lighter dark color for the card */
+       color: #fff;
+       /* White text */
+   }
+
+   .feature-card .btn-primary {
+       background-color: #007bff;
+       /* Primary button color */
+       border-color: #007bff;
+       /* Match the border with button color */
+   }
+
+   .blog-feature-section {
+       background-color: #32373D;
+   }
+
+   .feature-card {
+       width: 80%;
+       max-width: 800px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+       transition: transform 0.3s ease-in-out;
+   }
+
+   .feature-card:hover {
+       transform: translateY(-5px);
+   }
+
+   .feature-card-img {
+       width: 100%;
+       height: auto;
+       object-fit: cover;
+   }
+
+   .feature-card-title {
+       font-size: 1.75rem;
+       font-weight: bold;
+   }
+
+   .feature-card-text {
+       font-size: 1rem;
+       color: #ffffff;
+   }
+
+   .card-date-time,
+   .card-author {
+       font-size: 0.875rem;
+       color: #ffffff;
+   }
+
+   .feature-btn {
+       font-size: 1rem;
+       padding: 0.75rem 1.5rem;
+       border-radius: 5px;
+   }
+
+   .feature-btn:hover {
+       background-color: #0056b3;
+       border-color: #004085;
+   }
