@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blog</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/styles2.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar position-sticky">
+        <!-- Desktop Logo -->
+        <a class="navbar-brand d-none d-lg-block" href="#">
+            <img src="images/rocket.svg" width="150px" height="150px" alt="MyWebsite Logo" class="desktop-logo">
+        </a>
+        <!-- Mobile Logo -->
+        <a class="navbar-brand d-block d-lg-none" href="#">
+            <img src="images/rocket.svg" alt="MyWebsite Logo" class="mobile-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-star"></i>
+        </button>
+        <!-- Off-Canvas Menu -->
+        <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blogs/LastestBlog.html">Blog</a>
+                    </li>
+                    <!-- Planet Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="planetDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Planets
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown" aria-labelledby="planetDropdown">
+                            <li><a class="dropdown-item" href="#">Mercury</a></li>
+                            <li><a class="dropdown-item" href="#">Venus</a></li>
+                            <li><a class="dropdown-item" href="#">Earth</a></li>
+                            <li><a class="dropdown-item" href="#">Mars</a></li>
+                            <li><a class="dropdown-item" href="#">Jupiter</a></li>
+                            <li><a class="dropdown-item" href="#">Saturn</a></li>
+                            <li><a class="dropdown-item" href="#">Uranus</a></li>
+                            <li><a class="dropdown-item" href="#">Neptune</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Search Bar (Visible on mobile inside off-canvas menu) -->
+                    <form class="d-lg-none mt-3">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Search Bar (Hidden on mobile, visible on large screens) -->
+        <form class="d-none d-lg-flex ms-auto">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+    </nav>
+
+    <!-- Featured Post Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="featured-post">
+                    <img src="https://via.placeholder.com/800x400" alt="Featured Post">
+                    <div class="post-title">Tentang Creativity Block pada UI Designer</div>
+                    <div class="post-date">Maret 05, 2021</div>
+                    <div class="post-summary">Beberapa cara yang saya lakukan ketika tidak memiliki ide atau bingung
+                        untuk memulai design...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid Section for Other Posts -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Memilih foto yang cocok untuk desain website</div>
+                    <div class="grid-post-date">Maret 01, 2021</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Membuat desain header yang proporsional</div>
+                    <div class="grid-post-date">Februari 28, 2021</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Cara memakai inspirasi dari referensi</div>
+                    <div class="grid-post-date">Februari 24, 2021</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Sebaiknya Belajar UI Design mulai dari mana?</div>
+                    <div class="grid-post-date">Februari 23, 2021</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Pertanyaan tentang terjun di industri UI/UX</div>
+                    <div class="grid-post-date">Februari 21, 2021</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-post">
+                    <img src="https://via.placeholder.com/400x200" alt="Post">
+                    <div class="grid-post-title">Dari Website Programmer Menjadi UI Designer</div>
+                    <div class="grid-post-date">Februari 18, 2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Blog</p>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

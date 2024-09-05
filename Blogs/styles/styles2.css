@@ -1,0 +1,125 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #1c1c1c;
+    /* Dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for a subtle effect */
+    padding: 10px 20px;
+}
+
+/* Desktop Logo */
+.desktop-logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Mobile Logo */
+.mobile-logo {
+    width: 100px;
+    /* Adjust logo size for mobile */
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.mobile-logo:hover {
+    opacity: 0.8;
+    /* Fade effect on hover */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    /* Remove border */
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler .fas.fa-star {
+    color: #fff;
+    /* Icon color */
+}
+
+/* Off-Canvas Menu */
+.offcanvas {
+    background-color: #1c1c1c;
+    /* Dark background for off-canvas */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Border at bottom for header */
+}
+
+/* Off-Canvas Menu Links */
+.offcanvas-body .nav-link {
+    color: #f8f9fa;
+    transition: color 0.3s ease-in-out;
+}
+
+.offcanvas-body .nav-link:hover {
+    color: #ffc107;
+    /* Gold color on hover */
+}
+
+/* Dropdown Styling */
+.custom-dropdown {
+    background-color: #333333;
+    border: none;
+}
+
+.custom-dropdown .dropdown-item {
+    color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #ffc107;
+    /* Highlight on hover */
+    color: #000000;
+    /* Text color change */
+}
+
+/* Search Bar Customization */
+.form-control {
+    border: none;
+    border-radius: 0;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 8px 12px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    /* Placeholder text */
+}
+
+.btn-outline-light {
+    border: none;
+    background-color: #ffc107;
+    color: #000000;
+}
+
+.btn-outline-light:hover {
+    background-color: #e0a800;
+    /* Darken on hover */
+    color: #000000;
+}
+
+/* Search Bar for large screens */
+.d-lg-flex .input-group {
+    max-width: 300px;
+    /* Adjust search bar width */
+}
+
+/* Off-canvas search bar (mobile) */
+.d-lg-none .input-group {
+    margin-top: 20px;
+}
+
+/* Sticky position for navbar */
+.position-sticky {
+    top: 0;
+    z-index: 1030;
+    /* Ensure navbar stays above other content */
+}
