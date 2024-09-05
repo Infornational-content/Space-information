@@ -118,7 +118,7 @@
        right: 30px;
        z-index: 99;
        font-size: 18px;
-       background-color: #555;
+       background-color: #9853ff;
        color: white;
        border: none;
        padding: 15px;
@@ -127,8 +127,18 @@
        transition: background-color 0.3s ease;
    }
 
+   /* General hover state for desktop */
    #goTopBtn:hover {
        background-color: #d581d6;
+   }
+
+   /* Touch interaction on mobile devices */
+   @media (max-width: 768px) {
+
+       #goTopBtn:active,
+       #goTopBtn:focus {
+           background-color: hsl(282, 100%, 74%);
+       }
    }
 
    /* Social Media Button Styles */
