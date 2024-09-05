@@ -1,13 +1,26 @@
-const goTopBtn = document.getElementById("goTopBtn");
+// Get the button
+let goTopBtn = document.getElementById("goTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
+// When the user scrolls down 100px from the top, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     goTopBtn.style.display = "block";
   } else {
     goTopBtn.style.display = "none";
   }
-});
+}
 
-goTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+// When the user clicks the button, scroll to the top of the document
+goTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
