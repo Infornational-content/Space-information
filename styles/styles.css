@@ -10,7 +10,6 @@
    }
 
    /* CSS */
-   /* CSS */
    .about-us-logo {
        max-width: 150px;
        /* Adjust the size as needed */
@@ -389,6 +388,17 @@
        /* Orange for habitable */
    }
 
+   .custom-card-img {
+       /* Ensures the image covers the area while maintaining aspect ratio */
+       width: 75%;
+       height: 75%;
+
+       /* Center the image */
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
    .custom-badge-dwarf {
        background-color: #f0ad4e;
        /* Custom color for Dwarf Planet badge */
@@ -483,11 +493,13 @@
 
    .desktop-logo, .mobile-logo {
        max-height: 40px;
+       border-radius: 50%;
    }
 
    @media (max-width: 991px) {
        .desktop-logo {
            display: none;
+
        }
    }
 
