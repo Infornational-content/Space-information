@@ -111,40 +111,24 @@
 
    /* Go to Top Button */
    #goTopBtn {
-       position: fixed;
-       /* Fixes button to the viewport */
-       bottom: 20px;
-       /* Positions 20px from the bottom */
-       right: 20px;
-       /* Positions 20px from the right */
        display: none;
-       /* Initially hides the button */
-       background-color: #007bff;
-       /* Blue background */
+       /* Hidden by default */
+       position: fixed;
+       bottom: 20px;
+       right: 30px;
+       z-index: 99;
+       font-size: 18px;
+       background-color: #555;
        color: white;
-       /* White text/icon */
        border: none;
-       /* Removes borders */
+       padding: 15px;
        border-radius: 50%;
-       /* Circular button */
-       width: 50px;
-       /* Button width */
-       height: 50px;
-       /* Button height */
-       font-size: 24px;
-       /* Larger font size for icon */
-       text-align: center;
-       /* Centers icon/text horizontally */
-       line-height: 50px;
-       /* Vertically centers icon/text */
        cursor: pointer;
-       /* Pointer cursor on hover */
+       transition: background-color 0.3s ease;
    }
 
-   /* Go to Top Button Hover Effect */
    #goTopBtn:hover {
-       background-color: #0056b3;
-       /* Darker blue background on hover */
+       background-color: #d581d6;
    }
 
    /* Social Media Button Styles */
