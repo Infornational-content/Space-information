@@ -123,3 +123,164 @@
     z-index: 1030;
     /* Ensure navbar stays above other content */
 }
+
+/* Set background for the posts */
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General container styling */
+.featured-container, .grid-posts-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Featured post styling */
+.featured-post {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.featured-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.featured-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.featured-date, .post-author, .post-time {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.featured-summary {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #eee;
+}
+
+/* Grid posts styling */
+.grid-post {
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grid-post-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.grid-post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.grid-post-date, .post-time, .post-author {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Badge styling */
+.badge {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* Custom badge colors */
+.badge.bg-primary {
+    background-color: #007bff;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d;
+}
+
+.badge.bg-info {
+    background-color: #17a2b8;
+    color: #111;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107;
+    color: #111;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545;
+}
+
+.badge.bg-success {
+    background-color: #28a745;
+}
+
+.badge.bg-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Custom scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width for vertical scrollbar */
+    height: 12px;
+    /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+    /* More rounded corners for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 50px;
+    /* Extra roundness for the scrollbar thumb */
+    border: 3px solid #f1f1f1;
+    /* Optional border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Hide the scrollbar arrow buttons (only applies to older WebKit browsers) */
+::-webkit-scrollbar-button {
+    display: none;
+    /* Hide the up/down or left/right arrow buttons */
+}
+
+/* Custom scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Scrollable container with a more rounded border-radius */
+.custom-scrollbar {
+    height: 300px;
+    /* Height of the scrollable area */
+    overflow-y: scroll;
+    /* Vertical scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    scrollbar-width: thin;
+    /* Firefox scrollbar width */
+    scrollbar-color: #888 #f1f1f1;
+    border-radius: 20px;
+    /* More rounded corners for the container */
+}
