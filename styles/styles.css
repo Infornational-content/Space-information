@@ -1,286 +1,709 @@
-/* Custom Navbar Styling */
-.custom-navbar {
-    background-color: #1c1c1c;
-    /* Dark background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Soft shadow for a subtle effect */
-    padding: 10px 20px;
-}
+   /* Custom Hero Section Styles */
+   .custom-hero-section {
+       background-color: #1c1c1c;
+       color: #f8f9fa;
+       padding: 5rem 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
 
-/* Desktop Logo */
-.desktop-logo {
-    transition: transform 0.3s ease-in-out;
-}
+   @media (min-width: 992px) {
+
+       /* For desktop devices */
+       .custom-hero-section {
+           padding-top: -2rem !important;
+           /* Reduced top padding */
+           padding-bottom: 1rem;
+           /* Reduced bottom padding */
+       }
+
+       .custom-hero-image {
+           max-width: 90%;
+           max-height: 90%;
+           /* Increase image size */
+           margin: 0 auto;
+           margin-top: -15rem !important;
+           /* Center the image */
+       }
+   }
+
+   /* For mobile devices (small screens) */
+   @media (max-width: 576px) {
+       .custom-hero-section {
+           padding-top: 0.9rem !important;
+           /* Increased top padding for mobile */
+           padding-bottom: 9rem !important;
+           /* Increased bottom padding for mobile */
+       }
+
+       .custom-hero-image {
+           max-width: 90%;
+           /* Make the image larger on mobile */
+           margin: 0 auto;
+           margin-top: -2rem !important;
+           /* Center the image */
+       }
+   }
+
+   /* CSS */
+   .about-us-logo {
+       max-width: 150px;
+       /* Adjust the size as needed */
+       height: 150px;
+       /* Ensure the height is the same as the width for a perfect circle */
+       border-radius: 50%;
+       /* Makes the image circular */
+       object-fit: cover;
+       /* Ensures the image covers the area properly */
+   }
+
+   .custom-hero-container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 2rem;
+   }
+
+   .custom-hero-image {
+       width: 100%;
+       height: auto;
+       /* Maintains aspect ratio */
+       height: auto;
+       margin-top: -7rem;
+       margin-bottom: -10rem;
+       border-radius: 10px;
+   }
+
+   .custom-hero-description {
+       font-size: 1.25rem;
+       color: #d3d3d3;
+       margin-bottom: 2rem;
+       max-width: 800px;
+   }
+
+   .about-us-section {
+       background-color: #1c1c1c;
+       /* Custom black background */
+       color: #f8f9fa;
+       /* Light text for contrast */
+       padding: 5rem 0;
+       /* Vertical spacing */
+   }
+
+   .about-us-title {
+       color: #ffffff;
+       /* Custom accent color (tomato) */
+       font-size: 2.5rem;
+       font-weight: 700;
+       margin-bottom: 2rem;
+   }
+
+   .about-us-text {
+       color: #d3d3d3;
+       /* Lighter grey text */
+       font-size: 1.2rem;
+       max-width: 800px;
+       margin: 0 auto;
+   }
+
+   .about-us-btn {
+       background: linear-gradient(45deg, #3c57b9, #5d7bd5);
+       border: none;
+       /* Remove border if not needed */
+       color: #fff;
+       /* Change text color to white for contrast */
+       padding: 0.75rem 2rem;
+       border-radius: 30px;
+       font-size: 1rem;
+       transition: all 0.3s ease;
+   }
+
+   .about-us-logo {
+       border-radius: 50%;
+   }
+
+   .about-us-btn:hover {
+       background: linear-gradient(45deg, #5d7bd5, #3c57b9);
+       /* Reverse gradient on hover */
+       color: #fff;
+       /* Keep text color white on hover */
+   }
+
+   /* Custom Pagination Styles */
+   .custom-pagination .page-item .page-link {
+       color: #fff;
+       /* White text color for pagination links */
+       background-color: #007bff;
+       /* Primary blue background */
+       border: none;
+       /* Removes borders */
+   }
+
+   /* Active Pagination Link */
+   .custom-pagination .page-item.active .page-link {
+       background-color: #0056b3;
+       /* Darker blue for the active page link */
+   }
+
+   /* Go to Top Button */
+   #goTopBtn {
+       display: none;
+       /* Hidden by default */
+       position: fixed;
+       bottom: 20px;
+       right: 30px;
+       z-index: 99;
+       font-size: 18px;
+       background-color: #9853ff;
+       color: white;
+       border: none;
+       padding: 15px;
+       border-radius: 50%;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+
+   /* General hover state for desktop */
+   #goTopBtn:hover {
+       background-color: #d581d6;
+   }
+
+   /* Touch interaction on mobile devices */
+   @media (max-width: 768px) {
+
+       #goTopBtn:active,
+       #goTopBtn:focus {
+           background-color: hsl(282, 100%, 74%);
+       }
+   }
+
+   /* Social Media Button Styles */
+   .social-btn {
+       background-color: #007bff;
+       /* Blue background */
+       color: white;
+       /* White icon color */
+       border: none;
+       /* No border */
+       border-radius: 50%;
+       /* Circular buttons */
+       width: 40px;
+       /* Button width */
+       height: 40px;
+       /* Button height */
+       font-size: 18px;
+       /* Font size for icons */
+       text-align: center;
+       /* Centers icon horizontally */
+       line-height: 40px;
+       /* Vertically centers the icon */
+       transition: background-color 0.3s ease;
+       /* Smooth hover transition */
+   }
+
+   /* Social Media Button Hover Effect */
+   .social-btn:hover {
+       background-color: #0056b3;
+       /* Darker blue background on hover */
+   }
 
 
-/* Mobile Logo */
-.mobile-logo {
-    width: 100px;
-    /* Adjust logo size for mobile */
-    height: auto;
-    transition: opacity 0.3s;
-}
+   /* Custom Background and Text Color for the Blog Section */
+   .custom-bg-dark {
+       background-color: #343a40;
+       /* Dark background color */
+   }
 
-.mobile-logo:hover {
-    opacity: 0.8;
-    /* Fade effect on hover */
-}
+   .custom-text-light {
+       color: #f8f9fa;
+       /* Light text color */
+   }
 
-/* Navbar Toggler */
-.navbar-toggler {
-    border: none;
-    /* Remove border */
-    background-color: transparent;
-    font-size: 1.5rem;
-}
+   /* Custom Display Heading */
+   .custom-display-4 {
+       font-size: 2.5rem;
+       /* Custom size for the display heading */
+       font-weight: 300;
+       /* Light font weight */
+   }
 
-.navbar-toggler .fas.fa-star {
-    color: #fff;
-    /* Icon color */
-}
+   /* Custom Card Styling */
+   .custom-card {
+       background-color: #6c757d;
+       /* Secondary background color for cards */
+       border: none;
+       /* Remove border */
+       border-radius: 0.5rem;
+       /* Rounded corners */
+   }
 
-/* Off-Canvas Menu */
-.offcanvas {
-    background-color: #1c1c1c;
-    /* Dark background for off-canvas */
-}
+   .custom-card-img {
+       border-top-left-radius: 0.5rem;
+       /* Rounded corners on top-left */
+       border-top-right-radius: 0.5rem;
+       /* Rounded corners on top-right */
+       height: 200px;
+       /* Fixed height for images */
+       object-fit: cover;
+       /* Cover the card area */
+   }
 
-.offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    /* Border at bottom for header */
-}
+   .custom-card-title {
+       font-size: 1.25rem;
+       /* Custom size for card titles */
+       font-weight: 500;
+       /* Medium font weight */
+   }
 
-/* Off-Canvas Menu Links */
-.offcanvas-body .nav-link {
-    color: #f8f9fa;
-    transition: color 0.3s ease-in-out;
-}
+   .card-reading-time {
+       font-size: 0.875rem;
+       /* Slightly smaller font size */
+       color: #ffffff;
+       /* White text color for contrast */
+       background-color: #c834db;
+       /* Bright blue background color for highlighting */
+       margin-top: 0.5rem;
+       /* Space above the element */
+       margin-bottom: 0.5rem;
+       /* Space below the element */
+       font-weight: bold;
+       /* Bold text */
+       text-transform: uppercase;
+       /* Uppercase text */
+       border-radius: 5px;
+       /* Rounded corners for the background */
+       border: 2px solid #2980b9;
+       /* Darker blue border for definition */
+       padding: 0.5rem 1rem;
+       /* Padding around the text for better spacing */
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       /* Light shadow for a subtle 3D effect */
+       display: inline-block;
+       /* Fit the background to the text width */
+   }
 
-.offcanvas-body .nav-link:hover {
-    color: #ffc107;
-    /* Gold color on hover */
-}
+   .custom-card-text {
+       font-size: 1rem;
+       /* Standard font size for card text */
+       line-height: 1.5;
+       /* Line height for readability */
+   }
 
-/* Dropdown Styling */
-.custom-dropdown {
-    background-color: #333333;
-    border: none;
-}
+   .custom-date-time {
+       font-size: 0.875rem;
+       /* Smaller font size for date and time */
+       color: #e9ecef;
+       /* Slightly lighter color for date and time */
+   }
 
-.custom-dropdown .dropdown-item {
-    color: #ffffff;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
+   .custom-badge-dark {
+       background-color: blueviolet;
+   }
 
-.custom-dropdown .dropdown-item:hover {
-    background-color: #ffc107;
-    /* Highlight on hover */
-    color: #000000;
-    /* Text color change */
-}
+   .custom-btn {
+       background-color: #007bff;
+       /* Primary color for button */
+       border-color: #007bff;
+       /* Primary border color */
+       font-size: 1rem;
+       /* Standard button font size */
+   }
 
-/* Search Bar Customization */
-.form-control {
-    border: none;
-    border-radius: 0;
-    background-color: #333333;
-    color: #ffffff;
-    padding: 8px 12px;
-}
+   /* Badge Styles */
+   .custom-badge-info {
+       background-color: #17a2b8;
+       /* Info badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
 
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-    /* Placeholder text */
-}
+   .custom-badge-secondary {
+       background-color: #b92cff !important;
+       /* Replace with your desired background color */
+       color: #fff;
+       /* Optional: set text color for better contrast */
+   }
 
-.btn-outline-light {
-    border: none;
-    background-color: #ffc107;
-    color: #000000;
-}
+   .custom-badge-warning {
+       background-color: #ffc107;
+       /* Warning badge color */
+       color: #212529;
+       /* Text color for badges */
+   }
 
-.btn-outline-light:hover {
-    background-color: #e0a800;
-    /* Darken on hover */
-    color: #000000;
-}
+   .custom-badge-success {
+       background-color: #28a745;
+       /* Success badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
 
-/* Search Bar for large screens */
-.d-lg-flex .input-group {
-    max-width: 300px;
-    /* Adjust search bar width */
-}
+   .custom-badge-danger {
+       background-color: #dc3545;
+       /* Danger badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
 
-/* Off-canvas search bar (mobile) */
-.d-lg-none .input-group {
-    margin-top: 20px;
-}
+   .custom-badge-primary {
+       background-color: #007bff;
+       /* Primary badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
 
-/* Sticky position for navbar */
-.position-sticky {
-    top: 0;
-    z-index: 1030;
-    /* Ensure navbar stays above other content */
-}
+   .custom-badge-light {
+       background-color: #f8f9fa;
+       /* Light badge color */
+       color: #212529;
+       /* Text color for badges */
+   }
 
-/* Set background for the posts */
-body {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+   .custom-badge-secondary {
+       background-color: #6c757d;
+       /* Secondary badge color */
+       color: #ffffff;
+       /* Text color for badges */
+   }
 
-/* General container styling */
-.featured-container, .grid-posts-container {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
+   /* Responsive Styling for Blog Cards */
+   @media (max-width: 768px) {
+       .custom-card-img {
+           height: 150px;
+           /* Adjust image height for smaller screens */
+       }
+   }
 
-/* Featured post styling */
-.featured-post {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+   /* Custom badge color for Dwarf Planets */
 
-.featured-image {
-    width: 100%;
-    border-radius: 8px;
-}
 
-.featured-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 15px;
-}
+   .custom-tag {
+       background-color: #6c757d;
+       /* Default tag color */
+       color: #fff;
+       margin: 0 5px 5px 0;
+       padding: 5px 10px;
+       border-radius: 20px;
+       font-size: 0.9rem;
+       display: inline-block;
+   }
 
-.featured-date, .post-author, .post-time {
-    font-size: 14px;
-    color: #ccc;
-}
+   .custom-tag.Inner-Planet {
+       background-color: #007bff;
+       /* Blue for inner planets */
+   }
 
-.featured-summary {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #eee;
-}
+   .custom-tag.Outer-Planet {
+       background-color: #28a745;
+       /* Green for outer planets */
+   }
 
-/* Grid posts styling */
-.grid-post {
-    background-color: #111;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+   .custom-tag.Terrestrial {
+       background-color: #dc3545;
+       /* Red for terrestrial planets */
+   }
 
-.grid-post-image {
-    width: 100%;
-    border-radius: 8px;
-}
+   .custom-tag.Gas-Giant {
+       background-color: #17a2b8;
+       /* Teal for gas giants */
+   }
 
-.grid-post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-}
+   .custom-tag.Ice-Giant {
+       background-color: #6610f2;
+       /* Purple for ice giants */
+   }
 
-.grid-post-date, .post-time, .post-author {
-    font-size: 14px;
-    color: #ccc;
-}
+   .custom-tag.Habitable {
+       background-color: #fd7e14;
+       /* Orange for habitable */
+   }
 
-/* Badge styling */
-.badge {
-    margin-right: 5px;
-    margin-top: 10px;
-}
+   .custom-card-img {
+       /* Ensures the image covers the area while maintaining aspect ratio */
+       width: 75%;
+       height: 75%;
 
-/* Custom badge colors */
-.badge.bg-primary {
-    background-color: #007bff;
-}
+       /* Center the image */
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+   }
 
-.badge.bg-secondary {
-    background-color: #6c757d;
-}
+   .custom-badge-dwarf {
+       background-color: #f0ad4e;
+       /* Custom color for Dwarf Planet badge */
+       color: #fff;
+       /* Text color */
+   }
 
-.badge.bg-info {
-    background-color: #17a2b8;
-    color: #111;
-}
+   .custom-tag.Trans-Neptunian {
+       background-color: #fd7e14;
+       /* Orange for trans-Neptunian objects */
+   }
 
-.badge.bg-warning {
-    background-color: #ffc107;
-    color: #111;
-}
+   .custom-btn {
+       background-color: #007bff;
+       /* Bootstrap primary color */
+       color: #fff;
+       /* White text */
+       border: none;
+       border-radius: 5px;
+       padding: 10px 20px;
+       text-transform: uppercase;
+       font-weight: bold;
+       transition: background-color 0.3s, transform 0.3s;
+   }
 
-.badge.bg-danger {
-    background-color: #dc3545;
-}
+   .custom-btn:hover {
+       background-color: #0056b3;
+       /* Darker blue for hover effect */
+       transform: scale(1.05);
+       /* Slightly enlarge button on hover */
+   }
 
-.badge.bg-success {
-    background-color: #28a745;
-}
+   .custom-btn:focus,
+   .custom-btn:active {
+       outline: none;
+       box-shadow: none;
+   }
 
-.badge.bg-dark {
-    background-color: #343a40;
-    color: #fff;
-}
+   .custom-iframe-section {
+       padding: 3rem 0;
+       /* Adjust padding as needed */
+       text-align: center;
+   }
 
-/* Custom scrollbar for Chrome, Safari, and Edge */
-::-webkit-scrollbar {
-    width: 12px;
-    /* Width for vertical scrollbar */
-    height: 12px;
-    /* Height for horizontal scrollbar */
-}
+   .custom-heading {
+       margin-bottom: 2rem;
+       /* Increased spacing */
+   }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 20px;
-    /* More rounded corners for the scrollbar track */
-}
+   .custom-ratio {
+       position: relative;
+       width: 100%;
+       padding-top: 56.25%;
+       /* 16:9 aspect ratio */
+   }
 
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 50px;
-    /* Extra roundness for the scrollbar thumb */
-    border: 3px solid #f1f1f1;
-    /* Optional border around the thumb */
-}
+   .custom-ratio iframe {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 50%;
+       height: 50%;
+   }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
+   /* Custom dropdown styling */
+   .custom-dropdown {
+       background-color: black;
+       /* Dropdown background color */
+   }
 
-/* Hide the scrollbar arrow buttons (only applies to older WebKit browsers) */
-::-webkit-scrollbar-button {
-    display: none;
-    /* Hide the up/down or left/right arrow buttons */
-}
+   .custom-dropdown .dropdown-item {
+       color: white;
+       /* Text color */
+       transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+       /* Smooth transition for background color, text color, and scale */
+   }
 
-/* Custom scrollbar for Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
-}
+   .custom-dropdown .dropdown-item:hover {
+       background-color: white;
+       /* Hover background color */
+       color: black;
+       /* Hover text color */
+       transform: scale(1.1);
+       /* Scale effect on hover */
+   }
 
-/* Scrollable container with a more rounded border-radius */
-.custom-scrollbar {
-    height: 300px;
-    /* Height of the scrollable area */
-    overflow-y: scroll;
-    /* Vertical scrolling */
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
-    scrollbar-width: thin;
-    /* Firefox scrollbar width */
-    scrollbar-color: #888 #f1f1f1;
-    border-radius: 20px;
-    /* More rounded corners for the container */
-}
+   /* Navigation Bar Styles */
+   .custom-navbar {
+       top: 0;
+       z-index: 1030;
+   }
+
+   .desktop-logo, .mobile-logo {
+       max-height: 40px;
+       border-radius: 50%;
+   }
+
+   @media (max-width: 991px) {
+       .desktop-logo {
+           display: none;
+
+       }
+   }
+
+   @media (min-width: 992px) {
+       .mobile-logo {
+           display: none;
+       }
+   }
+
+   .offcanvas {
+       background-color: #343a40;
+       /* Dark background for off-canvas menu */
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .offcanvas-header {
+       border-bottom: 1px solid #495057;
+       /* Optional: a separator line */
+   }
+
+   .custom-dropdown .dropdown-menu {
+       background-color: #343a40;
+       /* Dark background for dropdown */
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .custom-dropdown .dropdown-item {
+       color: #f8f9fa;
+       /* Light text color */
+   }
+
+   .custom-dropdown .dropdown-item:hover {
+       background-color: #495057;
+       /* Highlight color on hover */
+   }
+
+   .search-bar {
+       margin-top: 0.5rem;
+       /* Space between search bar and other elements */
+   }
+
+   @media (min-width: 992px) {
+       .search-bar {
+           display: flex;
+           margin-left: auto;
+           /* Align search bar to the right */
+       }
+   }
+
+   .blog-feature-section {
+       background-color: #1C1C1C;
+       /* Dark background */
+       color: #fff;
+       /* White text */
+   }
+
+   .feature-card {
+       background-color: #212529;
+       /* Slightly lighter dark color for the card */
+       color: #fff;
+       /* White text */
+   }
+
+   .feature-card .btn-primary {
+       background-color: #007bff;
+       /* Primary button color */
+       border-color: #007bff;
+       /* Match the border with button color */
+   }
+
+   .blog-feature-section {
+       background-color: #32373D;
+   }
+
+   .feature-card {
+       width: 80%;
+       max-width: 800px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+       transition: transform 0.3s ease-in-out;
+   }
+
+   .feature-card:hover {
+       transform: translateY(-5px);
+   }
+
+   .feature-card-img {
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 50%;
+       height: auto;
+   }
+
+   .feature-card-title {
+       font-size: 1.75rem;
+       font-weight: bold;
+   }
+
+   .feature-card-text {
+       font-size: 1rem;
+       color: #ffffff;
+   }
+
+   .card-date-time,
+   .card-author {
+       font-size: 0.875rem;
+       color: #ffffff;
+   }
+
+   .feature-btn {
+       font-size: 1rem;
+       padding: 0.75rem 1.5rem;
+       border-radius: 5px;
+   }
+
+   .feature-btn:hover {
+       background-color: #0056b3;
+       border-color: #004085;
+   }
+
+   /* Custom scrollbar for Chrome, Safari, and Edge */
+   ::-webkit-scrollbar {
+       width: 12px;
+       /* Width for vertical scrollbar */
+       height: 12px;
+       /* Height for horizontal scrollbar */
+   }
+
+   ::-webkit-scrollbar-track {
+       background: #f1f1f1;
+       border-radius: 20px;
+       /* More rounded corners for the scrollbar track */
+   }
+
+   ::-webkit-scrollbar-thumb {
+       background-color: #888;
+       border-radius: 50px;
+       /* Extra roundness for the scrollbar thumb */
+       border: 3px solid #f1f1f1;
+       /* Optional border around the thumb */
+   }
+
+   ::-webkit-scrollbar-thumb:hover {
+       background-color: #555;
+   }
+
+   /* Hide the scrollbar arrow buttons (only applies to older WebKit browsers) */
+   ::-webkit-scrollbar-button {
+       display: none;
+       /* Hide the up/down or left/right arrow buttons */
+   }
+
+   /* Custom scrollbar for Firefox */
+   * {
+       scrollbar-width: thin;
+       scrollbar-color: #888 #f1f1f1;
+   }
+
+   /* Scrollable container with a more rounded border-radius */
+   .custom-scrollbar {
+       height: 300px;
+       /* Height of the scrollable area */
+       overflow-y: scroll;
+       /* Vertical scrolling */
+       overflow-x: hidden;
+       /* Prevent horizontal scrolling */
+       scrollbar-width: thin;
+       /* Firefox scrollbar width */
+       scrollbar-color: #888 #f1f1f1;
+       border-radius: 20px;
+       /* More rounded corners for the container */
+   }
