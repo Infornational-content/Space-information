@@ -9,6 +9,44 @@
        text-align: center;
    }
 
+   @media (min-width: 992px) {
+
+       /* For desktop devices */
+       .custom-hero-section {
+           padding-top: -2rem !important;
+           /* Reduced top padding */
+           padding-bottom: 1rem;
+           /* Reduced bottom padding */
+       }
+
+       .custom-hero-image {
+           max-width: 90%;
+           max-height: 90%;
+           /* Increase image size */
+           margin: 0 auto;
+           margin-top: -15rem !important;
+           /* Center the image */
+       }
+   }
+
+   /* For mobile devices (small screens) */
+   @media (max-width: 576px) {
+       .custom-hero-section {
+           padding-top: 0.9rem !important;
+           /* Increased top padding for mobile */
+           padding-bottom: 9rem !important;
+           /* Increased bottom padding for mobile */
+       }
+
+       .custom-hero-image {
+           max-width: 90%;
+           /* Make the image larger on mobile */
+           margin: 0 auto;
+           margin-top: -2rem !important;
+           /* Center the image */
+       }
+   }
+
    /* CSS */
    .about-us-logo {
        max-width: 150px;
@@ -91,7 +129,6 @@
        color: #fff;
        /* Keep text color white on hover */
    }
-
 
    /* Custom Pagination Styles */
    .custom-pagination .page-item .page-link {
