@@ -707,3 +707,44 @@
        border-radius: 20px;
        /* More rounded corners for the container */
    }
+
+   /* Style the dropdown items */
+   .custom-dropdown .dropdown-item {
+       color: #000;
+       /* Default text color */
+       background-color: transparent;
+       /* Default background color */
+       transition: color 0.3s ease, background-color 0.3s ease;
+       /* Smooth hover transition */
+   }
+
+   /* Change color on hover */
+   .custom-dropdown .dropdown-item:hover {
+       color: #fff;
+       /* White text on hover */
+       background-color: #007bff;
+       /* Custom background color on hover (e.g., Bootstrap's blue) */
+   }
+
+
+
+   /* Change color on hover */
+   .custom-dropdown .dropdown-item:hover {
+       color: #fff;
+       /* White text on hover */
+       background-color: #007bff;
+       /* Custom background color on hover (e.g., Bootstrap's blue) */
+   }
+
+   .custom-dropdown {
+       background-color: black;
+   }
+
+   .custom-dropdown .dropdown-item {
+       color: white;
+   }
+
+   .custom-dropdown .dropdown-item:hover {
+       background-color: darkgray;
+       color: black;
+   }
