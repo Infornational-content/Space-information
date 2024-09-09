@@ -284,3 +284,105 @@ body {
     border-radius: 20px;
     /* More rounded corners for the container */
 }
+
+/* Go to Top Button */
+#goTopBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #9853ff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* General hover state for desktop */
+#goTopBtn:hover {
+    background-color: #d581d6;
+}
+
+/* Touch interaction on mobile devices */
+@media (max-width: 768px) {
+
+    #goTopBtn:active,
+    #goTopBtn:focus {
+        background-color: hsl(282, 100%, 74%);
+    }
+}
+
+.custom-footer {
+    background-color: #222;
+    /* Dark background */
+    color: #ddd;
+    /* Light text */
+    padding: 20px 0;
+}
+
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Social media icon styles */
+.social-links {
+    margin-top: 15px;
+    text-align: center;
+    /* Center the icons horizontally */
+}
+
+/* Social button styles */
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    /* Set a fixed width for circle */
+    height: 50px;
+    /* Set equal height for circle */
+    border-radius: 50%;
+    background-color: #555;
+    /* Base background */
+    color: #fff;
+    /* Icon color */
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+}
+
+/* Specific styles for each social media button */
+.facebook-btn:hover {
+    background-color: #3b5998;
+    /* Facebook color */
+}
+
+.twitter-btn:hover {
+    background-color: #1da1f2;
+    /* Twitter color */
+}
+
+.instagram-btn:hover {
+    background-color: #e4405f;
+    /* Instagram color */
+}
+
+.linkedin-btn:hover {
+    background-color: #0077b5;
+    /* LinkedIn color */
+}
+
+.youtube-btn:hover {
+    background-color: #ff0000;
+    /* YouTube color */
+}
