@@ -317,72 +317,140 @@ body {
     }
 }
 
-.custom-footer {
-    background-color: #222;
-    /* Dark background */
-    color: #ddd;
-    /* Light text */
-    padding: 20px 0;
-}
-
-.custom-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Social media icon styles */
-.social-links {
-    margin-top: 15px;
-    text-align: center;
-    /* Center the icons horizontally */
-}
-
-/* Social button styles */
-.social-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    /* Set a fixed width for circle */
-    height: 50px;
-    /* Set equal height for circle */
-    border-radius: 50%;
-    background-color: #555;
-    /* Base background */
+/* Footer Container */
+footer {
+    background-color: #333;
+    /* Dark background for the footer */
     color: #fff;
-    /* Icon color */
-    font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
+    /* White text color */
+    padding: 20px 0;
+    /* Add padding */
+    text-align: center;
+    /* Center the content */
+    font-family: Arial, sans-serif;
 }
 
-.social-btn:hover {
-    transform: scale(1.1);
-    /* Slight zoom effect */
+/* Footer Links */
+footer a {
+    color: #fff;
+    /* Footer links are white by default */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
-/* Specific styles for each social media button */
-.facebook-btn:hover {
-    background-color: #3b5998;
-    /* Facebook color */
+footer a:hover {
+    color: #f39c12;
+    /* Change link color on hover */
 }
 
-.twitter-btn:hover {
-    background-color: #1da1f2;
-    /* Twitter color */
+/* Social Icons */
+.custom-icon {
+    font-size: 24px;
+    /* Customize icon size */
+    margin: 0 10px;
+    /* Adjust spacing between icons */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects for transform, color, and shadow */
 }
 
-.instagram-btn:hover {
-    background-color: #e4405f;
-    /* Instagram color */
+/* Default colors for icons */
+.custom-icon.facebook {
+    color: #3b5998;
+    /* Facebook blue */
 }
 
-.linkedin-btn:hover {
-    background-color: #0077b5;
-    /* LinkedIn color */
+.custom-icon.twitter {
+    color: #00acee;
+    /* Twitter blue */
 }
 
-.youtube-btn:hover {
-    background-color: #ff0000;
-    /* YouTube color */
+.custom-icon.instagram {
+    color: #e4405f;
+    /* Instagram pink */
+}
+
+.custom-icon.linkedin {
+    color: #0077b5;
+    /* LinkedIn blue */
+}
+
+.custom-icon.github {
+    color: #333;
+    /* GitHub dark */
+}
+
+/* Hover effects for icons */
+.custom-icon:hover {
+    transform: scale(1.2);
+    /* Enlarge icons on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add subtle shadow effect on hover */
+}
+
+/* Hover colors for specific icons */
+.custom-icon.facebook:hover {
+    color: #3b5998;
+    /* Facebook blue on hover */
+}
+
+.custom-icon.twitter:hover {
+    color: #00acee;
+    /* Twitter blue on hover */
+}
+
+.custom-icon.instagram:hover {
+    color: #e4405f;
+    /* Instagram pink on hover */
+}
+
+.custom-icon.linkedin:hover {
+    color: #0077b5;
+    /* LinkedIn blue on hover */
+}
+
+.custom-icon.github:hover {
+    color: #333;
+    /* GitHub dark on hover */
+}
+
+/* Social Icons Container */
+.social-icons {
+    margin-top: 15px;
+    /* Adjust spacing above the icons */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center icons horizontally */
+}
+
+/* Footer Bottom Text */
+footer p {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 14px;
+    /* Smaller text size for bottom text */
+    color: #bbb;
+    /* Light gray color for subtle text */
+}
+
+/* Responsive Footer for Smaller Screens */
+@media (max-width: 768px) {
+    .social-icons {
+        margin-top: 10px;
+        /* Reduce top margin on smaller screens */
+    }
+
+    .custom-icon {
+        font-size: 20px;
+        /* Smaller icon size for mobile */
+        margin: 0 5px;
+        /* Reduce spacing between icons */
+    }
+
+    footer p {
+        font-size: 12px;
+        /* Reduce font size for bottom text */
+    }
 }
