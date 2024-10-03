@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles2.css">
+</head>
+<script src="scripts/new script"> </script>
+
+<body class="bg-dark text-white">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Planet Blog Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Planet Blog
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Off-canvas Menu for Mobile -->
+    <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Planet Blog</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex mt-3">
+                <input class="form-control me-2 bg-dark text-white" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 text-white"> Mercury (बुध) </h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-globe icon-planet"></i> Planet</h5>
+                        <p class="card-text">Mercury</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-ruler-combined icon-diameter"></i> Diameter (km)</h5>
+                        <p class="card-text">4,880</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-sun icon-distance"></i> Distance from Sun (AU)</h5>
+                        <p class="card-text">0.39</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-moon icon-moons"></i> Moons</h5>
+                        <p class="card-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-balance-scale icon-mass"></i> Mass (kg)</h5>
+                        <p class="card-text">3.30 x 10<sup>23</sup></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-clock icon-orbital"></i> Orbital Period (Earth days)
+                        </h5>
+                        <p class="card-text">88</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-thermometer-half icon-temperature"></i> Surface
+                            Temperature
+                            (°C)</h5>
+                        <p class="card-text">-173 (night) to 427 (day)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-weight-hanging icon-gravity"></i> Gravity (m/s²)</h5>
+                        <p class="card-text">3.7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-cloud icon-atmosphere"></i> Atmosphere Composition</h5>
+                        <p class="card-text">Oxygen, Sodium, Hydrogen, Helium, Potassium</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border border-light shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-gem icon-rings"></i> Rings</h5>
+                        <p class="card-text">No</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div class="card my-4 fun-facts-card custom-box">
+        <div class="card-body fun-facts-body">
+            <h3 class="text-center fun-facts-title">Fun Facts About Mercury</h3>
+            <ul class="list-unstyled fun-facts-list">
+                <li><i class="fas fa-star"></i> <span class="highlight">Mercury is the closest planet</span> to the Sun.
+                </li>
+                <li><i class="fas fa-star"></i> It has the <span class="highlight">shortest orbital period</span> of all
+                    the
+                    planets in the Solar System.</li>
+                <li><i class="fas fa-star"></i> Mercury has a very thin atmosphere, which cannot hold heat, leading to
+                    <span class="highlight">extreme temperature variations</span>.
+                </li>
+                <li><i class="fas fa-star"></i> <span class="highlight">It is the smallest planet</span> in the Solar
+                    System.</li>
+                <li><i class="fas fa-star"></i> Mercury is named after the <span class="highlight">Roman messenger
+                        god</span>.</li>
+                <li><i class="fas fa-star"></i> The planet has a <span class="highlight">heavily cratered
+                        surface</span>,
+                    similar to the Moon.</li>
+                <li><i class="fas fa-star"></i> Mercury has a <span class="highlight">crust that is primarily composed
+                        of
+                        silicate rock</span>.</li>
+                <li><i class="fas fa-star"></i> It is classified as an <span class="highlight">inner planet</span> due
+                    to
+                    its proximity to the Sun.</li>
+                <li><i class="fas fa-star"></i> Mercury has an average core temperature of about <span
+                        class="highlight">4,000 degrees Celsius</span>.</li> <!-- Core temperature fact -->
+                <li><i class="fas fa-star"></i> The core of Mercury makes up about <span class="highlight">75% of its
+                        radius</span>, making it one of the largest cores relative to the size of the planet.</li>
+                <!-- New core size fact added here -->
+            </ul>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-duotone">
+                    <i class="fas fa-arrow-right"></i> Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <h5>About Planet Blog</h5>
+                    <p>Explore the wonders of our solar system and beyond. Planet Blog provides detailed information on
+                        planets, moons, stars, and other celestial objects.</p>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com" target="_blank" class="text-white text-decoration-none">
+                                <i class="fab fa-youtube fa-lg"></i> YouTube
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.telegram.com" target="_blank" class="text-white text-decoration-none">
+                                <i class="fab fa-telegram fa-lg"></i> Telegram
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com" target="_blank" class="text-white text-decoration-none">
+                                <i class="fab fa-instagram fa-lg"></i> Instagram
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com" target="_blank" class="text-white text-decoration-none">
+                                <i class="fab fa-facebook fa-lg"></i> Facebook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-secondary text-center py-2">
+            <p class="mb-0">© 2024 Planet Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Go to Top Button
+    <button onclick="scrollToTop()" id="goTopBtn" class="btn btn-primary">
+        <i class="fas fa-arrow-up"></i>
+    </button>-->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

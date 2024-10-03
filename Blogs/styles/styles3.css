@@ -1,0 +1,107 @@
+  body {
+      background-color: #f8f9fa;
+      /* Light background for the blog */
+  }
+
+  h1 {
+      color: #2c3e50;
+      /* Darker color for the title */
+      font-family: 'Arial', sans-serif;
+  }
+
+  .card {
+      transition: transform 0.2s;
+      /* Smooth transition on hover */
+  }
+
+
+  .card-title {
+      font-weight: bold;
+      /* Make card titles bold */
+  }
+
+  .badge {
+      margin-right: 5px;
+      /* Space between badges */
+  }
+
+  .text-muted {
+      font-style: italic;
+      /* Italicize the publish info */
+  }
+
+  .mercury-card {
+      border-left: 5px solid #f39c12;
+      /* Custom border for Mercury */
+  }
+
+  .venus-card {
+      border-left: 5px solid #e74c3c;
+      /* Custom border for Venus */
+  }
+
+  .earth-card {
+      border-left: 5px solid #3498db;
+      /* Custom border for Earth */
+  }
+
+  .mars-card {
+      border-left: 5px solid #e67e22;
+      /* Custom border for Mars */
+  }
+
+  .jupiter-card {
+      border-left: 5px solid #8e44ad;
+      /* Custom border for Jupiter */
+  }
+
+  .saturn-card {
+      border-left: 5px solid #f1c40f;
+      /* Custom border for Saturn */
+  }
+
+  .uranus-card {
+      border-left: 5px solid #1abc9c;
+      /* Custom border for Uranus */
+  }
+
+  .neptune-card {
+      border-left: 5px solid #2980b9;
+      /* Custom border for Neptune */
+  }
+
+  #goTopBtn {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Fixed/sticky position */
+      bottom: 20px;
+      /* Place the button 20px from the bottom */
+      right: 30px;
+      /* Place the button 30px from the right */
+      z-index: 99;
+      /* Make sure it does not overlap */
+      width: 50px;
+      /* Set width */
+      height: 50px;
+      /* Set height to match width for a perfect circle */
+      font-size: 24px;
+      /* Increase font size for larger arrow */
+      padding: 0;
+      /* Remove padding */
+      background-color: #007bff;
+      /* Default blue background */
+      color: white;
+      /* White text */
+      cursor: pointer;
+      /* Add a mouse pointer on hover */
+      border-radius: 50%;
+      /* Make it a perfect circle */
+      border: none;
+      /* Remove borders */
+  }
+
+  #goTopBtn:hover {
+      background-color: #555;
+      /* Darker background on hover */
+  }

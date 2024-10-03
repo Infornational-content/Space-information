@@ -1,0 +1,238 @@
+/* Custom styles for the planet information table */
+.table-custom {
+    background-color: #ffffff;
+    /* White background for the table */
+    border-radius: 10px;
+    /* Rounded corners for the table */
+    overflow: hidden;
+    /* Ensure borders are rounded */
+}
+
+.table-custom th {
+    background-color: #007bff;
+    /* Blue background for header */
+    color: #ffffff;
+    /* White text for header */
+    text-align: center;
+    /* Center text in header */
+}
+
+.table-custom td {
+    vertical-align: middle;
+    /* Align text vertically in the center */
+}
+
+/* Icon styles */
+.table-custom i {
+    margin-right: 8px;
+    /* Spacing between icon and text */
+    font-size: 1.2em;
+    /* Increase icon size */
+}
+
+/* Specific colors for icons */
+.icon-planet {
+    color: #ff4500;
+    /* Orange-red for planet icon */
+}
+
+.icon-diameter {
+    color: #28a745;
+    /* Green for diameter icon */
+}
+
+.icon-distance {
+    color: #17a2b8;
+    /* Teal for distance icon */
+}
+
+.icon-moons {
+    color: #ffc107;
+    /* Yellow for moons icon */
+}
+
+.icon-mass {
+    color: #6f42c1;
+    /* Purple for mass icon */
+}
+
+.icon-orbital {
+    color: #fd7e14;
+    /* Orange for orbital period icon */
+}
+
+.icon-temperature {
+    color: #dc3545;
+    /* Red for temperature icon */
+}
+
+.icon-atmosphere {
+    color: #6610f2;
+    /* Indigo for atmosphere icon */
+}
+
+.icon-rings {
+    color: #007bff;
+    /* Blue for rings icon */
+}
+
+/* Text styles */
+.table-custom td .text-detail {
+    color: #333333;
+    /* Dark grey color for text */
+    font-weight: 500;
+    /* Slightly bolder text */
+}
+
+/* Even row styles */
+.table-custom tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Light grey for even rows */
+}
+
+/* Hover styles */
+.table-custom tbody tr:hover {
+    background-color: #d9edf7;
+    /* Light blue on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.table-custom {
+    border: 2px solid #007bff;
+    /* Change color as needed */
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* fun-facts-card */
+.fun-facts-card {
+    border: 2px solid #f8c42a;
+    /* Example border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    background: linear-gradient(135deg, #000 0%, #1c1c1c 100%);
+    /* Galaxy-inspired gradient background */
+    color: #fff;
+    /* White text color */
+    margin: 20px;
+    /* Increased margin for more spacing */
+    overflow: hidden;
+    /* Ensures content does not overflow the rounded corners */
+    transition: transform 0.3s;
+    /* Transition for hover effect */
+    position: relative;
+    /* For pseudo-elements positioning */
+    padding: 20px;
+    /* Add padding to the card */
+}
+
+.custom-box {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    /* Enhanced shadow effect */
+}
+
+.fun-facts-body {
+    padding: 20px;
+    /* Padding inside the card body */
+}
+
+.fun-facts-title {
+    font-size: 28px;
+    /* Adjust title font size */
+    color: #f8c42a;
+    /* Title color to match the border */
+    margin-bottom: 15px;
+    /* Space below the title */
+    text-align: center;
+    /* Center align the title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    /* Add shadow to the title */
+}
+
+.fun-facts-list {
+    list-style-type: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.fun-facts-list li {
+    margin: 15px 0;
+    /* Space between list items */
+    color: #fff;
+    /* Ensure list item text is white */
+    font-size: 18px;
+    /* Slightly larger font for list items */
+    position: relative;
+    /* For pseudo-elements positioning */
+}
+
+/* Optional: Add star effect using pseudo-elements */
+.fun-facts-card::before,
+.fun-facts-card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* Replace with actual star pattern URL */
+    opacity: 0.1;
+    /* Semi-transparent for subtle effect */
+    pointer-events: none;
+    /* Ignore mouse events */
+}
+
+/* Button */
+.btn-duotone {
+    background: linear-gradient(45deg, #6c63ff, #f4b400);
+    /* Gradient background */
+    color: white;
+    /* Text color */
+    padding: 12px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 16px;
+    /* Font size */
+    display: inline-flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    /* Center icon and text */
+    transition: background 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s;
+    /* Multiple transitions for smooth effects */
+}
+
+.btn-duotone:hover {
+    background: linear-gradient(45deg, #f4b400, #6c63ff);
+    /* Reverse gradient on hover */
+    color: white;
+    /* Keep text color white on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow effect on hover */
+}
+
+.btn-duotone i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    font-size: 18px;
+    /* Icon size */
+}
+
+.highlight {
+    background-color: yellow;
+    /* Change this to your preferred highlight color */
+    padding: 0.2em;
+    /* Optional: Adds some padding around the highlighted text */
+    border-radius: 10px;
+    /* Sets the rounded corners of the highlight */
+    color: black;
+    /* Sets the text color to ensure visibility against the highlight */
+    font-weight: bold;
+    /* Makes the highlighted text bold for better visibility */
+}
