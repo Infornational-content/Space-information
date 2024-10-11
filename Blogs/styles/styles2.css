@@ -236,3 +236,32 @@
     font-weight: bold;
     /* Makes the highlighted text bold for better visibility */
 }
+
+.mercury-badge {
+    font-size: 20px;
+}
+
+.custom-bg-globe {
+    background-color: darkgreen;
+    /* Change the background color of the 'Planet' badge */
+}
+
+.custom-bg-sun {
+    background-color: orange;
+    /* Change the background color of the 'Closest to Sun' badge */
+}
+
+.icon-globe {
+    color: white;
+    /* Globe icon color */
+}
+
+.icon-sun {
+    color: yellow;
+    /* Sun icon color */
+}
+
+.star-color {
+    color: rgb(0, 255, 242);
+    /* Change to any color you prefer */
+}
