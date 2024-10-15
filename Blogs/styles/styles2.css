@@ -265,3 +265,197 @@
     color: rgb(0, 255, 242);
     /* Change to any color you prefer */
 }
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 100%);
+    border-bottom: 2px solid #444;
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 0 8px #8a2be2);
+    /* Neon glow effect on the logo */
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.2);
+    /* Zoom on hover */
+    filter: drop-shadow(0 0 12px #ff69b4);
+    /* Shift to pink glow */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #e0e0e0;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff69b4;
+    /* Neon pink on hover */
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.btn-outline-light {
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 0 8px #fff inset, 0 0 5px #ff69b4;
+}
+
+.btn-outline-light:hover {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+    color: white;
+}
+
+.form-control {
+    border-radius: 30px;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    color: white;
+    transition: box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 10px #ff69b4, 0 0 5px #8a2be2;
+    outline: none;
+}
+
+/* Off-canvas Styles */
+.offcanvas {
+    background: radial-gradient(circle, #0d0d0d 0%, #1a1a1a 100%);
+}
+
+.offcanvas-title {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.offcanvas .nav-link {
+    padding: 15px 0;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    transition: background-color 0.4s;
+}
+
+.offcanvas .nav-link:hover {
+    background-color: #333;
+    border-left: 4px solid #ff69b4;
+}
+
+.btn-close-white {
+    filter: invert(100%);
+}
+
+/* Dropdown Menu */
+.space-dropdown {
+    background: linear-gradient(135deg, #0f0f3e, #1c1c5a);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(33, 150, 243, 0.5);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    /* Smooth transition on hover */
+}
+
+/* Dropdown Items */
+.space-dropdown .dropdown-item {
+    color: #ddd;
+    transition: color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.space-dropdown .dropdown-item:hover {
+    background-color: rgba(33, 150, 243, 0.8);
+    /* Neon blue hover */
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+/* Divider Style */
+.space-dropdown .dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+/* Glow Effect for Navbar Links */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1eb9f3;
+    text-shadow: 0 0 12px #1eb9f3;
+}
+
+/* Offcanvas Menu - Futuristic Feel */
+.offcanvas {
+    background: linear-gradient(135deg, #1a1a40, #292959);
+    color: #fff;
+    transition: background 0.4s ease, color 0.3s ease;
+}
+
+.offcanvas-header .btn-close {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+/* Offcanvas Link Transitions */
+.offcanvas-body .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.offcanvas-body .nav-link:hover {
+    color: #1eb9f3;
+    text-shadow: 0 0 8px #1eb9f3;
+}
+
+/* Button Hover Effect */
+.btn-outline-light {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #1eb9f3;
+    border-color: #1eb9f3;
+    color: black;
+    box-shadow: 0 0 15px #1eb9f3;
+}
+
+/* Navbar Toggler Animation */
+.navbar-toggler {
+    transition: transform 0.3s ease;
+}
+
+
+/* Smooth Dropdown Expand Animation */
+.space-dropdown {
+    animation: dropdownExpand 0.4s ease forwards;
+}
+
+@keyframes dropdownExpand {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
